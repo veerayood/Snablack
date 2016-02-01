@@ -3,39 +3,88 @@
     ViewBag.Title = "Register";
 }
 
-<h2>@ViewBag.Title.</h2>
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+<Header>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5"><a href="" class="logo"><img src="~/images/logo1.jpg" width="50px" height="50px">  SnablacK</a></div>
+        <div class="col-md-6">
+            <div class='preload login--container'>
+                <div class='login--form'>
+                    <div class='login--username-container'>
+                        <label>Username</label>
+                        <input autofocus placeholder='Username' type='text'>
+                    </div>
+                    <div class='login--password-container'>
+                        <label>Password</label>
+                        <input placeholder='Password' type='password'>
+                        <button class='js-toggle-login login--login-submit'>Login</button>
+                    </div>
+                </div>
+                <div class='login--toggle-container'>
+                    <small> . </small>
+                    <div class='js-toggle-login'>Login</div>
+                </div>
+            </div>
+            <!--<form class="form-inline">
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputPassword3">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-default">Sign in</button>
+            </form>-->
+        </div>
+    </div>
+</Header>
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
-    <h4>Create a new account.</h4>
-    <hr />
-    @Html.ValidationSummary("", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-        </div>
+
+    <div class="col-md-1"></div>
+    <div class="col-md-1"><a class='regis'>Register</a></div><br><br>
+    <div class="col-md-2">
+        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "Username" })
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+        <div class="col-md-12"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email" })
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+        <div class="col-md-12"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
         </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
+        <div class="col-md-12"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", placeholder = "Confirm password" })
+        </div><br>
+        <div class="col-md-12"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
             <input type="submit" class="btn btn-default" value="Register" />
         </div>
-    </div>
+
+        @*@Html.ValidationSummary("", new { @class = "text-danger" })กรอกข้อความผิด*@
+
+
 }
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+
+
+
+
+<canvas></canvas>
+
+

@@ -48,6 +48,7 @@ namespace PJ_Snablack.Models
 
     public class LoginViewModel
     {
+
         [Required]
         [Display(Name = "Email")]
         [EmailAddress]
@@ -64,6 +65,10 @@ namespace PJ_Snablack.Models
 
     public class RegisterViewModel
     {
+
+        [Display(Name = "UserName")]
+        public string UserName { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
