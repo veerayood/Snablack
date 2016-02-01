@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace PJ_Snablack.Controllers
 {
+    [Authorize]/* บังคับให้ login ก่อน */
     public class HomeController : Controller
     {
         public ActionResult Index()
