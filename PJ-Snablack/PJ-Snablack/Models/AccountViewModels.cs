@@ -65,6 +65,7 @@ namespace PJ_Snablack.Models
 
     public class RegisterViewModel
     {
+        internal string Email;
 
         [Display(Name = "UserName")]
         public string UserName { get; set; }
